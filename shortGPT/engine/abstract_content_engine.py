@@ -84,7 +84,7 @@ class AbstractContentEngine(ABC):
         self.logger = logger
 
     def initializeMagickAndFFMPEG(self):
-        ffmpeg_path = get_program_path("ffmpeg")
+        ffmpeg_path = get_program_path("ffmpeg-python")
         if not ffmpeg_path:
             raise Exception("FFmpeg, a program used for automated editing within ShortGPT was not found on your computer. Please go back to the README and follow the instructions to install FFMPEG")
         ffprobe_path = get_program_path("ffprobe")
