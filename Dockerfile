@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y curl \
 
 # Install ffmpeg and ImageMagick
 RUN apt-get update && apt-get install -y \
-    ffmpeg \
+    ffmpeg-phyton \
     imagemagick \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
