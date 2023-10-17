@@ -1,4 +1,4 @@
-import ffmpeg
+import ffmpeg-python
 import os
 import random
 import yt_dlp
@@ -51,7 +51,7 @@ def extract_random_clip_from_video(video_url, video_duration, clip_duration , ou
     start_time = video_duration*0.15 + random.random()* (0.7*video_duration-clip_duration)
     
     (
-        ffmpeg
+        ffmpeg-python
         .input(video_url, ss=start_time, t=clip_duration)
         .output(output_file, codec="libx264", preset="ultrafast")
         .run()
